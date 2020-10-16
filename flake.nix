@@ -30,10 +30,7 @@
 
         packages = {
           home-tyr = home-manager.lib.homeManagerConfiguration {
-            configuration = { ... }: {
-              nixpkgs.config.allowUnfree = true;
-              imports = [ ];
-            };
+            configuration = ./config.nix;
             homeDirectory = "/Users/shanesveller";
             pkgs = nixpkgs.legacyPackages.x86_64-darwin;
             system = "x86-64_darwin";

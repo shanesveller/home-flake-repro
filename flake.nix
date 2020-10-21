@@ -29,6 +29,14 @@
         };
 
         packages = {
+          home-odin = home-manager.lib.homeManagerConfiguration {
+            configuration = ./config.nix;
+            homeDirectory = "/home/shane";
+            pkgs = nixpkgs.legacyPackages.x86_64-linux;
+            system = "x86-64_linux";
+            username = "shane";
+          };
+
           home-tyr = home-manager.lib.homeManagerConfiguration {
             configuration = ./config.nix;
             homeDirectory = "/Users/shanesveller";
